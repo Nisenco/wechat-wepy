@@ -91,7 +91,21 @@ import Group from '../components/group';
 import Toast from 'wepy-com-toast';
 import testMixin from '../mixins/test';
 
+
 console.log('moduleA ignored: ', moduleA); // => moduleA ignored: {}
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '微信小程序'
+    }
+    components = {
+      panel: Panel,
+      counter1: Counter,
+      counter2: Counter,
+      list: List,
+      group: Group,
+      toast: Toast
+    }
 
 @connect({
   num(state) {
